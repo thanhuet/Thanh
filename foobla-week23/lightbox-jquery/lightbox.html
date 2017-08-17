@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai 6</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+	<style type="text/css" media="screen">
+		.content{
+			
+		}
+		.img2{
+			position: absolute;
+			border: 6px solid green;
+			left: 20em;
+			top: 10em;
+			animation: lightbox 0.4s;
+			
+		}
+		p{
+			position: absolute;
+			left: 20em;
+			top: 27em;
+		}
+		@keyframes lightbox{
+			0%{
+				left: 0em;
+				top: -10em;
+			}
+			100%{
+				left: 20em;
+				top: 10em;
+			}	
+		}
+		.dele:before{
+			position: absolute;
+			z-index: 10em;
+			left: 12.9em;
+			top: 6.8em;
+			font-family: "FontAwesome";
+			content:  "\f2d3";
+			font-size: 40px;
+			color: black;
+		
+		}
+		.img1{
+			margin-top: 20px;
+			width: 9%;
+			
+		}
+		.box{
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="canhdong.jpg" alt="" class="img1">
+		<div class="content">
+			<a href="" class="dele">
+			</a>
+			<div class="box">
+			<img src="canhdong.jpg" alt="" class="img2">
+			<p>đã bật lighbox</p>
+			</div>
+		</div>
+	</div>
+	<script src="jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script>
+		$(document).ready(function(){
+			$('.img1').click(
+				function(){
+					$('.content').show(200);
+				});
+			$('.content').hide();
+			$('.dele').click(function(){
+				$('.content').hide();
+			});
+		});
+	</script>
+</body>
+</html>

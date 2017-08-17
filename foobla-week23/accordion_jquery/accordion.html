@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai 5</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	<h3>Môn toán</h3>
+	<div class="content">
+		Toán học là ngành nghiên cứu trừu tượng về những chủ đề như: lượng (các con số), cấu trúc, không gian, và sự thay đổi. Các nhà toán học và triết học có nhiều quan điểm khác nhau về định nghĩa và phạm vi của toán học
+	</div>
+	<h3>Môn lí</h3>
+	<div class="content">
+		Vật lý học (tiếng Anh: Physics, từ tiếng Hy Lạp cổ: φύσις có nghĩa là kiến thức về tự nhiên) là một môn khoa học tự nhiên tập trung vào sự nghiên cứu vật chất và chuyển động của nó trong không gian và thời gian, cùng với những khái niệm liên quan như năng lượng và lực. Vật lý học là một trong những bộ môn khoa học lâu đời nhất, với mục đích tìm hiểu sự vận động của vũ trụ.
+	</div>
+	<h3>Môn hóa</h3>
+	<div class="content">
+		ấu trúc, tính chất, và sự thay đổi của vật chất. Hóa học nói về các nguyên tố, hợp chất, nguyên tử, phân tử, và các phản ứng hóa học xảy ra giữa những thành phần đó.
+	</div>
+	<h3>Môn sinh</h3>
+	<div class="content">
+		Sinh học hay là Sinh vật học là một môn khoa học về sự sống (từ tiếng Anh: biology bắt nguồn từ Hy Lạp với bios là sự sống và logos là môn học). Nó là một nhánh của khoa học tự nhiên, tập trung nghiên cứu các cá thể sống, mối quan hệ giữa chúng với nhau và với môi trường. Nó miêu tả những đặc điểm và tập tính của sinh vật (ví dụ: cấu trúc, chức năng, sự phát triển, môi trường sống), cách thức các cá thể và loài tồn tại (ví dụ: nguồn gốc, sự tiến hóa và phân bổ của chúng).
+	</div>
+	</div>
+	<script src="jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script type="">
+		$(document).ready(
+			function(){
+				function showcontent(obj){
+						if($(obj).next().is(':hidden')){
+							$('.content').hide();
+							$(obj).next().show(100);
+						}
+						else{
+							$('.content').slideUp(100);
+						}
+					}
+				$('h3').click(function(){
+					showcontent(this);
+					return false;
+				});
+				$('h3:first-child').next().show(100);
+				$('.content').not($('h3:first-child').next()).slideUp(100);
+			});
+	</script>
+</body>
+</html>

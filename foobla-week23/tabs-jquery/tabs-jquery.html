@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai 2</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css" media="screen">
+	</style>
+</head>
+<body>
+	<div class="menu">
+	    <ul class="tab nav nav-tabs">
+	        <li>
+	            <a href="#tab-bong-da">Bóng đá</a>
+	        </li>
+	        <li>
+	            <a href="#tab-the-gioi">Thế giới</a>
+	        </li>
+	        <li>
+	            <a href="#tab-thoi-trang">Thời trang</a>
+	        </li>
+	  		<li>
+	            <a href="#tab-an-ninh">An ninh xã hội</a>
+	        </li>
+	  		<li>
+	            <a href="#tab-am-thuc">Ẩm thực</a>
+	        </li>
+	    </ul>
+	    <div class="content">
+	        <div class="item" id="tab-bong-da">
+	            <h2>Chelsea - Conte đá cúp siêu tệ: Sóng gió chờ đón nhà vua</h2> <br>
+				Thất bại cay đắng trên chấm luân lưu của Chelsea trước Arsenal lại tiếp tục cho thấy khả năng đá các trận đấu tranh cúp đáng lo của “The Blues” dưới thời Antonio Conte, và hứa hẹn một mùa giải sóng gió đang chờ đón nhà vua hiện tại của giải Ngoại hạng Anh.
+	        </div>
+	        <div class="item" id="tab-the-gioi">
+	            <h2>Nga phô diễn sức mạnh vô địch của tên lửa phóng loạt</h2> <br>
+				Khi phát nổ, loại vũ khí này đốt cháy toàn bộ không khí xung quanh và tạo ra sức công phá khủng khiếp.
+	        </div>
+	        <div class="item" id="tab-thoi-trang">
+	            <h2>Mẫu nội y "cởi đồ" để cổ vũ câu lạc bộ bóng đá Ý 104 tuổi</h2> <br>
+				Người mẫu kiêm MC truyền hình - Rosy Maggiulli quyết định mặc quần áo vẽ để cổ động câu lạc bộ bóng đá mình yêu thích.
+	        </div>
+			<div class="item" id="tab-an-ninh">
+				<h2>“Ông tây” mất của vì đưa “gái lạ” về ngủ cùng</h2> <br>
+				Thấy người phụ nữ mới quen say rượu, “ông tây” liền đưa về khách sạn ngủ cùng và phát hiện bị mất laptop vào sáng hôm sau.
+			</div>
+			<div class="item" id="tab-am-thuc">
+				<h2>Cách làm sấu ngâm mắm, chắt nước chấm rau ngon "quên sầu"</h2> <br>
+				Sấu ngâm mắm ớt là món đang rất được ưa chuộng bởi vị chua mặn dễ chịu, thơm mùi tỏi và có vị cay của ớt rất hấp dẫn. Đặc biệt nước sấu ngâm mắm chấm cùng rau luộc, thịt luộc rất ngon.
+			</div>
+	    </div>
+	</div>
+	<script src="jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script language="javascript">
+		$(document).ready(
+			function(){
+				function showcontent(obj){
+					$('.menu .tab li').removeClass('active');
+					$(obj).addClass('active');
+					$('.item').hide();
+					var herf = $(obj).find('a').attr('href');
+					$(herf).show();
+				}
+				$('.tab li ').click(function(){
+					showcontent(this);
+					return false;
+				});
+				showcontent($('.tab li:first-child'));
+			});
+
+
+	</script>
+</body>
+</html>

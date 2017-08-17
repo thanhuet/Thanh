@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai 3</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css" media="screen">
+		.child{
+			position: relative;
+		}
+		.ds_child{
+			position: absolute;
+			top: 0px;
+			left: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu dropdown">
+		<ul class="ds_parent nav nav-tabs">
+			<li class="item-child-1">
+			<a href="" >Bạn trẻ - Cuộc sống</a>
+				<ul class="ds_parent-2 nav nav-tabs dropdown-menu">
+					<li class="child">
+					<a href="" >Chuyện công sở</a>
+						<ul class="ds_child nav nav-tabs dropdown-menu">
+							<li><a href="" >Chuyện nhân công việc</a></li>
+							<li><a href="" >Chuyện văn hóa</a></li>
+							<li><a href="" >Chuyện nhạy cảm</a></li>
+						</ul>
+					</li>
+					<li><a href="" >Tình yêu giới tính</a></li>
+				</ul>
+			</li>
+			<li class="item-child-1">
+			<a href="" >Góc đồ họa</a>
+				<ul class="ds_parent-2 nav nav-tabs dropdown-menu">
+					<li><a href="" >Video</a></li>
+					<li><a href="" >Infographic</a></li>
+				</ul>
+			</li>
+			<li class="item-child-1">
+			<a href="" >Ô tô</a>
+				<ul class="ds_parent-2 nav nav-tabs dropdown-menu">
+					<li><a href="" >Ảnh người đẹp và xe</a></li>
+					<li><a href="" >Xe xịn</a></li>
+				</ul>
+			</li>
+			<li class="item-child-1">
+			<a href="" >Cười</a>
+				<ul class="ds_parent-2 nav nav-tabs dropdown-menu">
+					<li><a href="" >Video hài hước</a></li>
+					<li><a href="" >Thơ vui</a></li>
+				</ul>
+			</li>
+			<li class="item-child-1">
+			<a href="" >Sức khỏe đời sống</a>
+				<ul class="ds_parent-2 nav nav-tabs dropdown-menu">
+					<li><a href="" >Bệnh trẻ em</a></li>
+					<li><a href="" >Tin tức sức khỏe</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script src="jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script>
+		$('.ds_parent li').has('ul').hover(function() {
+			$(this).children('ul').slideDown(200)
+		}, function() {
+			$(this).children('ul').slideUp(200)
+		});
+	</script>
+</body>
+</html>

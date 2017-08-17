@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+	<style type="text/css" media="screen">
+		table{
+			margin: 40px auto;
+		}
+		table td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table border = "1" cellpadding="10px" cellspacing="0px">
+		<caption style = "font-size: 30px; padding-bottom: 10px;">Check Uncheck</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th>header1</th>
+				<th>header2</th>
+				<th>header3</th>
+				<th>Check all</th>
+				<th>Uncheck all</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>A</th>
+				<td><input type="checkbox" class="box1" name=""></td>
+				<td><input type="checkbox" class="box1" name=""></td>
+				<td><input type="checkbox" class="box1" name=""></td>
+				<td><input type="button" class="chk1" name="t"></td>
+				<td><input type="button" class="uchk1" name="t"></td>
+			</tr>
+			<tr>
+				<th>B</th>
+				<td><input type="checkbox" class="box2" name=""></td>
+				<td><input type="checkbox" class="box2" name=""></td>
+				<td><input type="checkbox" class="box2" 3name=""></td>
+				<td><input type="button" class="chk2" name="" ></td>
+				<td><input type="button" class="uchk2" name=""></td>
+			</tr>
+			<tr>
+				<th>C</th>
+				<td><input type="checkbox" class="box3" name=""></td>
+				<td><input type="checkbox" class="box3" name=""></td>
+				<td><input type="checkbox" class="box3" name=""></td>
+				<td><input type="button" class="chk3" name=""></td>
+				<td><input type="button" class="uchk3" name=""></td>
+			</tr>
+		</tbody>
+	</table>
+	<script src="jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script >
+		$(document).ready(function(){
+			$('.chk1').click(function(){
+				$('.chk1').checked = true;
+				for(var i=0; i<$('.box1').length;i++){
+				$('.box1')[i].checked = true;
+			}
+			});
+			$('.uchk1').click(function(){
+				$('.uchk1').checked = true;
+				for(var i=0; i<$('.box1').length;i++){
+				$('.box1')[i].checked = false;
+			}
+			});
+			$('.chk2').click(function(){
+				$('.chk2').checked = true;
+				for(var i=0; i<$('.box2').length;i++){
+				$('.box2')[i].checked = true;
+			}
+			});
+			$('.uchk2').click(function(){
+				$('.uchk2').checked = true;
+				for(var i=0; i<$('.box2').length;i++){
+				$('.box2')[i].checked = false;
+			}
+			});
+			$('.chk3').click(function(){
+				$('.chk3').checked = true;
+				for(var i=0; i<$('.box3').length;i++){
+				$('.box3')[i].checked = true;
+			}
+			});
+			$('.uchk3').click(function(){
+				$('.uchk3').checked = true;
+				for(var i=0; i<$('.box3').length;i++){
+				$('.box3')[i].checked = false;
+			}
+			});
+			}
+		);
+	</script>
+</body>
+</html>
